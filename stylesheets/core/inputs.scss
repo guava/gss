@@ -1,0 +1,27 @@
+///////////////////////////////////////////////////////////
+// Inputs                                   (Core block) //
+///////////////////////////////////////////////////////////
+
+input {
+  &[type="password"] {}
+  &[type="search"] {}
+  &[type="radio"] {}
+  &[type="checkbox"] {}
+  &[type="date"] {}
+  &[type="image"] {}
+  &[type="hidden"] {}
+  &:disabled {}
+  &:read-only {}
+  &:required {}
+  &:optional {}
+  &:invalid {}
+  &:focus {}
+  &:active {}
+  &:hover {}
+}
+
+::placeholder {}
+textarea {}
+select {}
+optgroup {}
+option {}

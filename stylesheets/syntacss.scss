@@ -1,0 +1,39 @@
+///////////////////////////////////////////////////////////
+// syntacss                                              //
+///////////////////////////////////////////////////////////
+
+@charset "utf-8";
+
+// Vendors ....................... Thirdy-party software //
+// @import "vendor/…";
+
+// Core blocks ......... Foundational UI building blocks //
+@import "core/mixins";           // Mixins & functions
+@import "core/scale";            // Modular scale, if needed
+@import "core/colors";           // Color variables
+@import "core/typography/files"; // Font import, if needed
+@import "core/typography";       // Typography system
+@import "core/inputs";           // Inputs, selects & labels
+@import "core/buttons";          // All sorts of buttons
+@import "core/tables";           // Tabular data
+@import "core/globals";          // Global HTML & classes
+
+// Vendors overwrites ........... Third-party overwrites //
+// @import "vendor/overwrites/…";
+
+// Modules ........................ Reusable UI patterns //
+@import "modules/alerts";
+@import "modules/cards";
+@import "modules/dropdowns";
+@import "modules/footers";
+@import "modules/forms";
+@import "modules/heros";
+@import "modules/modals";
+@import "modules/motion";
+@import "modules/sidebars";
+@import "modules/tabs";
+@import "modules/topbar";
+// @import "modules/…";
+
+// Pages .......................... Specific page themes //
+// @import "pages/…";

@@ -1,0 +1,59 @@
+///////////////////////////////////////////////////////////
+// Typography                               (Core block) //
+///////////////////////////////////////////////////////////
+
+// Font scaffold //////////////////////////////////////////
+
+// Fontfaces
+$header:       sans-serif;
+$text:         serif;
+
+// Weights
+$black:        800;
+$bold:         bold;
+$semibold:     600;
+$medium:       500;
+$normal:       normal;
+$regular:      $normal;
+$light:        300;
+
+// Font system ////////////////////////////////////////////
+
+// Title
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+
+// Paragraph
+p {}
+em {}
+label {}
+strong {}
+blockquote {}
+::selection {}
+
+// Link
+a {
+  &:visited {}
+  &:focus {}
+  &:hover {}
+}
+
+// Code
+code {}
+pre {}
+kbd {}
+
+// Small texts
+small {}
+legend {}
+figcaption {}
+
+// List
+ul {}
+ol {}
+li {}
+dl {}
+dl {}

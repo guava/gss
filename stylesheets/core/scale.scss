@@ -1,0 +1,25 @@
+///////////////////////////////////////////////////////////
+// Scale & measurements                     (Core block) //
+///////////////////////////////////////////////////////////
+
+// Base size (1rem)
+$base:         16px;
+
+// Modular Scale
+// www.modularscale.com
+$modularscale: (
+  base:        1rem,
+  ratio:       1.4
+);
+
+// Breakpoints
+$breakpoints: (
+  "phone":     20rem,
+  "tablet":    51rem,
+  "notebook":  68rem,
+  "desktop":   80rem
+);
+
+// Grid options
+$columns:      12;
+$gutter:       1rem;
