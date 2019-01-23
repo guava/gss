@@ -17,11 +17,13 @@ The architecture is made of three stylesheets layers that, together, compose the
 ### Core blocks
 <img src="/images/core-blocks.svg" width="42" height="35" alt="Core block icon by jon trillana from the Noun Project" />
 
-The first layer, **core blocks**, contains the small foundational UI building pieces; they are a set of pre determined ingredients that will be used in the following levels, as well as define the base HTML styles.
+The first layer, **core blocks**, contains the **small foundational UI building pieces**; they are a set of predetermined ingredients that will be used in the following levels. Also, they are named after the fundamental HTML tags; thus they should define base HTML styles as well.
+
+All _core blocks_ are interdependent, so it's crucial that the following order remains respected, even if the project doesn't need a specific _block_.
 
 Block | What it usually contains | _Identifier class*_
 ----- | ------------------------ | ----------------
-`mixins`     | Utility mixins & functions used throughout files | -
+`mixins`     | Utility mixins & functions used throughout files | –
 `scale`      | Modular scale & measurements | –
 `colors`     | Color pallette variables & color classes | `.color`
 `typography` | Type scale, families, headers, paragraphs, links, lists, small, etc | `.typography` or `.type`
@@ -30,18 +32,18 @@ Block | What it usually contains | _Identifier class*_
 `tables`     | Tabular data and table layouting | `.table`
 `globals`    | Global HTML & _modifier classes_ | –
 
-*_Use _identifier classes_ on _core blocks_ only when needed. For example, if the project doesn't have different types of tables, then a base `table` HTML should be enough._
+*_Use _identifier classes_ on _core blocks_ only when needed. E.g., if the project doesn't have different types of tables, then a base `table` HTML should be enough._
 
 ### Modules
 <img src="/images/modules.svg" width="68" height="38" alt="Module icon" />
 
-The second layer, **modules**, are UI patterns that can easily be reused throughout the design system. They are formed by groups of _core blocks_ functioning together as a unit. 
+The second layer, **modules**, are UI patterns that can easily be reused throughout the design system. They are formed by **groups of core blocks functioning together as a unit**. 
 
-For example, a `dropdown` module might contain `icons`, `typography`, and `buttons` _core blocks_; a navigation bar may have `typography`, `inputs`, `buttons`, and even other _modules_ as well, like the `dropdown` mentioned above. PS: Almost everything regarding design system has a typography _core block_.
+For example, a `.dropdown.module` might contain `.icons`, `.typography`, and `.buttons` _core blocks_; a navigation bar may have `.typography`, `.inputs`, `.buttons`, and even other _modules_ as well, like the `.dropdown.module` mentioned above. PS: Almost everything regarding design system has a `.typography` _core block_.
 
-Unlike the _core blocks_, _modules_ aren't pre determined—they may change according to each project's needs. You should create new modules as they make sense to the design system.
+Unlike the _core blocks_, _modules_ aren't predetermined—they may change according to each project's needs. So, you should create new modules as they make sense to the design system.
 
-When a _module_ has other _modules_ as children elements, it should define how the nested _modules_ are laid out, but shouldn't style them—for example, a `sidebar` _module_ that has a `tab` _module_ may lay out where the `tabs` are within the `sidebar`, but not how they should look.
+When a _module_ has other _modules_ as children elements, it should define how the nested _modules_ are laid out, but shouldn't style them—for example, a `.sidebar.module` that has a `.tab.module` may lay out where the `.tab` are within the `.sidebar` (`flex`, `position` etc), but not how they should look (`background-color`, `padding` etc).
 
 ### Pages
 <img src="/images/pages.svg" width="68" height="38" alt="Pages icon" />
@@ -70,7 +72,7 @@ Another example: a `.sidebar.module`.
   </a>
 </aside>
 ```
-The `.sidebar.module` above has an _identifier_ class (`.sidebar`) that is grouped with other _modifiers_ classes (`.sidebar.module` is the main wrapper; `.sidebar.logo` is a sidebar's piece). It also contains _core blocks_ like `a` and `.icon`. All of its styles are within `sidebars.scss` file.
+The `.sidebar.module` above has an _identifier_ class (`.sidebar`) that is grouped with other _modifiers_ classes (`.sidebar.module` is the main wrapper; `.sidebar.logo` is a sidebar's piece). It also contains _core blocks_ like `<a>` and `.icon`. All of its styles are within `sidebars.scss` file.
 
 A more complex example: a `.navigation.module`.
 ```HTML
@@ -100,8 +102,8 @@ Summing up: an _identifier_ class (_core block_, _module_, or _page_'s titles) p
 
 One last note about _modifiers_ classes: they can be either named after its structure (defining _how things are laid out_) or its appearance/semantic meaning (indicating _how things look like_ or _what purpose things have_).
 * Examples of structure modifiers: `.sidebar.wrapper`, `.sidebar.container`, `.sidebar.row`, etc.
-* Examples of appearance modifiers: `.button.big`, `.button.small`, `.button.rounded`, etc.
-* Examples of semantic modifiers: `.button.active`, `.button.primary`, `.button.loading`, etc.
+* Examples of appearance modifiers: `.big.button`, `.small.button`, `.rounded.button`, etc.
+* Examples of semantic modifiers: `.active.button`, `.primary.button`, `.loading.button`, etc.
 
 ### Naming principles and rules
 * Use of an _identifier_ class (usually without style). Eg.: `.button`, `.sidebar`, `.navigation`
