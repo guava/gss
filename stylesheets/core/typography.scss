@@ -9,7 +9,8 @@ $header:       sans-serif;
 $text:         serif;
 
 // Weights
-$black:        800;
+$black:        900;
+$extrabold:    800;
 $bold:         bold;
 $semibold:     600;
 $medium:       500;
@@ -18,6 +19,8 @@ $regular:      $normal;
 $light:        300;
 
 // Font system ////////////////////////////////////////////
+
+html, body {}
 
 // Title
 h1 {}
